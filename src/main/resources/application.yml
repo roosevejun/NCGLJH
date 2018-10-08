@@ -1,0 +1,56 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+  jpa:
+    show-sql: true
+    format_sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.spatial.dialect.postgis.PostgisPG95Dialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  hibernate:
+    dialect: org.hibernate.dialect.PostgreSQL95Dialect
+    ddl-auto: update
+    naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    provider_class: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.10.101:5432/pgsde
+    username: sde
+    password: sde
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      schema: public
+      exposePrimaryKeyColumns:  true
+      connection-test-query: SELECT 1
+      maximum-pool-size: 15
+      min-idle: 5
+      auto-commit: true
+      connection-timeout: 300000
+      max-lifetime: 1800000
+      pool-name: JHDateHikariCP
+  sqlserverdatasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.10.252:10024;databaseName=JH135;instanceName=TCGL;
+    username: tongtu
+    password: tongtu
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      schema: public
+      exposePrimaryKeyColumns:  true
+      connection-test-query: SELECT 1
+      maximum-pool-size: 15
+      min-idle: 5
+      auto-commit: true
+      connection-timeout: 300000
+      max-lifetime: 1800000
+      pool-name: SysHikariCP
+application:
+  message: Hello Nishaojun
+kaptcha:
+  captchaStoreKey: com.google.code.kaptcha.spring.boot.ext.SessionKaptchaResolver.KAPTCHA
+  captchaDateStoreKey: com.google.code.kaptcha.spring.boot.ext.SessionKaptchaResolver.KAPTCHA
