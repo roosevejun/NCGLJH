@@ -37,7 +37,7 @@ jQuery.login = {
     },
     loginSubmit: function () {
         $.ajax({
-            url: 'checkLogin.json',
+            url: 'checkLogin',
             type: 'POST',
             data: {
                 loginName: $("#loginName").val(),
@@ -45,6 +45,7 @@ jQuery.login = {
             },
             dataType: 'json',
             success: function (data) {
+                console.log(data)
                 var loginMessageDialog = new BootstrapDialog();
                 $(loginMessageDialog).attr("onshow", function () {
                     setTimeout(function (dialogRef) {

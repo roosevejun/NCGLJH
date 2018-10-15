@@ -5,12 +5,19 @@ import com.google.code.kaptcha.spring.boot.ext.KaptchaResolver;
 import com.google.code.kaptcha.spring.boot.ext.exception.KaptchaIncorrectException;
 import com.google.code.kaptcha.spring.boot.ext.exception.KaptchaTimeoutException;
 import com.tongtu.ncgl.base.controller.BaseController;
+import com.tongtu.ncgl.base.util.MD5;
+import com.tongtu.ncgl.base.util.ResultGenerator;
 import com.tongtu.ncgl.base.util.UserAccessAnnotation;
+import com.tongtu.ncgl.jh.services.UserService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +38,9 @@ import java.io.IOException;
 public class IndexController extends BaseController {
     @Autowired
     private KaptchaResolver captchaResolver;
+
+    @Autowired
+    private UserService userService;
 
     @UserAccessAnnotation()
     @RequestMapping(method = RequestMethod.GET, value = "home.do")
@@ -77,5 +87,23 @@ public class IndexController extends BaseController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
+    public ModelAndView checkLogin(@RequestParam(value = "loginName", required = true) String loginName, @RequestParam(value = "loginPass", required = true) String loginPass) {
+        loginPass = MD5.encrypt(loginPass);
+        UsernamePasswordToken token = new UsernamePasswordToken(loginName, loginPass);
+        try {
+            Subject subject = SecurityUtils.getSubject();
+            if (subject != null)
+                subject.logout();
+            SecurityUtils.getSubject().login(token);
+            return new ModelAndView("result", "result", ResultGenerator.genSuccessResult("登录成功"));
+        } catch (UnknownAccountException | IncorrectCredentialsException | LockedAccountException e) {
+            return new ModelAndView("result", "result", ResultGenerator.genFailResult(e.getMessage()));
+        } catch (AuthenticationException e) {
+            return new ModelAndView("result", "result", ResultGenerator.genFailResult("认证失败！"));
+        }
+
     }
 }

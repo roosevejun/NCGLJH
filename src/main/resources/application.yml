@@ -19,7 +19,7 @@ spring:
     provider_class: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.10.101:5432/pgsde
+    url: jdbc:postgresql://192.168.20.8:5432/pgsde
     username: sde
     password: sde
     type: com.zaxxer.hikari.HikariDataSource
@@ -35,7 +35,7 @@ spring:
       pool-name: JHDateHikariCP
   sqlserverdatasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://192.168.10.252:10024;databaseName=JH135;instanceName=TCGL;
+    url: jdbc:sqlserver://192.168.10.252:10024;databaseName=SaaSCommon;instanceName=TCGL;
     username: tongtu
     password: tongtu
     type: com.zaxxer.hikari.HikariDataSource
@@ -54,3 +54,21 @@ application:
 kaptcha:
   captchaStoreKey: com.google.code.kaptcha.spring.boot.ext.SessionKaptchaResolver.KAPTCHA
   captchaDateStoreKey: com.google.code.kaptcha.spring.boot.ext.SessionKaptchaResolver.KAPTCHA
+shiro:
+  # shiro redis缓存时长，默认1800秒
+  expireIn: 1800
+  # session 超时时间，默认1800000毫秒
+  sessionTimeout: 1800000
+  # rememberMe cookie有效时长，默认86400秒，即一天
+  cookieTimeout: 86400
+  # 免认证的路径配置，如静态资源，druid监控页面，注册页面，验证码请求等
+  anonUrl: /home.do,/checkLogin.json,/resources/**,/kaptcha,/validCaptcha,/css/**,/js/**,/fonts/**,/img/**,/druid/**,/user/regist,/gifCode,/,/actuator/**,/test/**
+  # 登录 url
+  loginUrl: /login
+  # 登录成功后跳转的 url
+  successUrl: /index
+  # 登出 url
+  logoutUrl: /logout
+  # 未授权跳转 url
+  unauthorizedUrl: /403
+
