@@ -1,9 +1,5 @@
 package com.tongtu.ncgl.jh.controller;
 
-
-import com.google.code.kaptcha.spring.boot.ext.KaptchaResolver;
-import com.google.code.kaptcha.spring.boot.ext.exception.KaptchaIncorrectException;
-import com.google.code.kaptcha.spring.boot.ext.exception.KaptchaTimeoutException;
 import com.tongtu.ncgl.base.controller.BaseController;
 import com.tongtu.ncgl.base.util.UserAccessAnnotation;
 import com.tongtu.ncgl.jh.services.UserService;
@@ -14,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
  * 项目名称：
@@ -54,8 +47,6 @@ public class IndexController extends BaseController {
     public ModelAndView loginToHome() {
         return new ModelAndView("redirect:/home.do");
     }
-
-
 
 
 }
