@@ -45,18 +45,18 @@ jQuery.login = {
             },
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 var loginMessageDialog = new BootstrapDialog();
                 $(loginMessageDialog).attr("onshow", function () {
                     setTimeout(function (dialogRef) {
                         loginMessageDialog.close();
-                    }, 500);
+                    }, 800);
                 });
-                if (data.code == "0001") {
+                if (data.code == "SUCCESS") {
                     loginMessageDialog.setTitle("登陆成功");
                     loginMessageDialog.setMessage("正在转入...............");
                     loginMessageDialog.setType(BootstrapDialog.TYPE_SUCCESS);
                     $(loginMessageDialog).attr("onhidden", function () {
+
                         console.log("onhidden")
                         window.location.href = "welcome.do";
                     });

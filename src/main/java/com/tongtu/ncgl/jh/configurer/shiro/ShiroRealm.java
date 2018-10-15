@@ -26,7 +26,7 @@ public class ShiroRealm extends AuthorizingRealm {
         if (user == null) {
             throw new UnknownAccountException("用户名不存在！");
         }
-        if (!password.equals(user.getAppuserPwd())) {
+        if (!password.toUpperCase().equals(user.getAppuserPwd())) {
             throw new IncorrectCredentialsException("用户名或密码错误！");
         }
 
