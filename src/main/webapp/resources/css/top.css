@@ -1,0 +1,9 @@
+body{color:#333;font-size:12px;line-height:22px;font-family:'宋体',Verdana;margin:0;padding:0;}
+body,table,tr,td,div,p,form,ul,li{padding:0;text-align:left;font-size:12px;font-family:'宋体',Verdana;color:#333}
+.topStyle{float:right;color:#8399B6;position:absolute;top:8px;right:20px;height:30px;line-height:30px;}
+.topStyle img{vertical-align:middle;padding-left:10px;}
+/*白色字链接样式*/
+a.whiteLink:link{color:#fff;text-decoration:none;}
+a.whiteLink:visited{color:#fff;text-decoration:none;}
+a.whiteLink:hover{color:#BECEF6;text-decoration:underline;}
+a.whiteLink:active{color:#BECEF6;}

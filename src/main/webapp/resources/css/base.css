@@ -1,0 +1,103 @@
+@charset "utf-8";
+/*当前位置样式*/
+.welcome{background:url(img/welcome_bg.jpg) repeat-x;height:27px;line-height:27px;color:#000;font-size:12px;text-indent:0.6em;border-left:1px solid #b1c3d0;border-right:1px solid #b1c3d0;
+    width:100%;min-width:790px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<790?"780px":"");margin-top:3px;margin-bottom:3px;}
+
+/*表格外框*/
+.tableWrap{background:#fff;border:1px solid #b1c3d0;width:100%;min-width:790px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<790?"790px":"");margin:auto;margin-bottom:8px;}
+.mapWrap{background:#fff;border:1px solid #b1c3d0;width:100%;min-width:790px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<790?"790px":"");margin:auto;margin-bottom:8px;}
+
+
+/*表格表头功能背景样式，如增加、删除、审核等*/
+.tabHeader{background:url(img/btn_bg.jpg) repeat-x;height:22px;line-height:22px;width:98%;min-width:790px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<780?"780px":"");margin:auto;padding:4px 0;border-left:1px solid #b1c3d0;border-right:1px solid #b1c3d0;}
+.btnWrap2{float:right;_padding-bottom:1px;vertical-align:middle;padding-right:10px;}
+
+/*表格表头样式*/
+/*.lbNav{background:url(img/lb_bg.jpg) repeat-x;height:25px;line-height:25px;}*/
+/*.lbNav{background:url(img/lb_bg.jpg) repeat-x;height:30px;line-height:30px;}*/
+.lbNav{height:30px;line-height:30px;background:#d6e9fc;}
+.lbNav .icoSpan{background:url(img/left_icon.jpg) no-repeat left;text-indent:1.6em;left:8px;position:relative;float:left;color:#294177;font-size:13px;font-weight:bold;}
+.lbNav .right{float:right;margin-right:10px;}
+
+/*表格列表样式*/
+.lbTable{width:98%;border:0px;background:#fff;border-collapse:collapse;font-size:12px;color:#000;margin:auto;margin-top:5px;border:solid 1px #a2b4be;margin-bottom:5px;}
+.lbTable td{padding:3px;border:1px solid #a2b4be;text-align:center;}
+.lbTable th{padding:3px;border:1px solid #a2b4be;text-align:center;background:#e6edf5;height:23px;line-height:23px;}
+.lbTable tr.grak{background:#f3f6f9;}
+.lbTable tr.select{background:#fffedd;}
+.lbTable tr.alt td {background:#f3f6f9; /*这行将给所有偶数行加上背景色*/}
+.lbTable tr.over td {background:#fffedd; /*这个将是鼠标高亮行的背景色*/}
+
+/*表格表单布局样式*/
+.tableForm{width:96%;min-width:780px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<790?"790px":"");border:0px;background-color:#fff;border-collapse:collapse;font-size:12px;color:#000;margin:auto;margin-top:5px;margin-bottom:5px;}
+.tableForm th {padding:3px;text-align:right;font-size:12px;font-weight:normal;}
+.tableForm td {padding:3px;text-align:left;color:#000;}
+.tableForm td.grak{padding:3px;border:1px solid #c9d1d6;text-align:left;color:#000;background:#f5faff;}
+.tableForm td.center{text-align:center;}
+.tableForm td.right{text-align:right;}
+
+/*输入框样式*/
+.inputSearch{width:100px;height:18px;line-height:18px;border:1px solid #a2b4be;background:#f9f9f9 url(img/input_bg.jpg) repeat-x left top;}
+.inputDateTimeSearch{width:100px;height:18px;line-height:18px;border:1px solid #a2b4be;background:#f9f9f9 url(img/date_time_bg.gif) no-repeat right top;}
+.selectSmallSearch{width:100px;height:22px;border:1px solid #a2b4be;background:#f2f6f9;}
+
+.inputSmall{width:80px;height:18px;line-height:18px;border:1px solid #a2b4be;background:#f9f9f9 url(img/input_bg.jpg) repeat-x left top;}
+.inputMedium{width:170px;height:18px;line-height:18px;border:1px solid #a2b4be;background:#f9f9f9 url(img/input_bg.jpg) repeat-x left top;}
+.inputBig{width:700px;height:18px;line-height:18px;border:1px solid #a2b4be;background:#f9f9f9 url(img/input_bg.jpg) repeat-x left top;}
+
+/*日期样式*/
+.inputDateTime{width:150px;height:18px;line-height:18px;border:1px solid #a2b4be;background:#f9f9f9 url(img/date_time_bg.gif) no-repeat right top;}
+
+/*按钮样式*/
+.btnSmall{width:60px;height:21px;line-height:21px;background:url(img/btn_small_bg.gif) no-repeat;text-align:center;border:none;cursor:pointer;margin-left:2px;}
+.btnMedium{width:90px;height:21px;line-height:21px;background:url(img/btn_big_bg.gif) no-repeat;text-align:center;border:none;cursor:pointer;margin-left:2px;}
+
+/*select样式*/
+.selectSmall{width:82px;*width:85px!important;_width:85px;height:22px;border:1px solid #a2b4be;background:#f2f6f9;}
+.selectBig{width:172px;*width:175px!important;_width:175px;height:22px;border:1px solid #a2b4be;background:#f2f6f9;}
+.selectPage{width:40px;height:22px;border:1px solid #a2b4be;background:#f2f6f9;}
+
+/*文本框样式*/
+.textarea{width:700px;height:70px;border:1px solid #a2b4be;background:#f2f6f9;}
+
+.page{background:#e7ebf2;height:32px;line-height:32px;color:#666;position:absolute; bottom: 13px;left:5px;}
+.page .left{float:left;height:32px;line-height:32px;padding-left:15px;}
+.page .right{float:right;height:32px;line-height:32px;padding-right:15px;}
+
+.mapbuttonback{-moz-user-select: none; float: left;}
+.mapbuttonSelect  {-moz-user-select: none; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35); border-left: 1px solid rgb(139, 164, 220); border-top: 1px solid rgb(139, 164, 220); border-bottom: 1px solid rgb(139, 164, 220); background: none repeat scroll 0% 0% rgb(142, 168, 224); padding: 2px 6px; font: bold 12px/1.3em arial,simsun,sans-serif; text-align: center; white-space: nowrap; border-radius: 3px 3px 3px 3px; color: rgb(255, 255, 255)}
+.mapbuttonUnSelect{-moz-user-select: none; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35); border-left: 1px solid rgb(139, 164, 220); border-width: 1px; border-style: solid; border-color: rgb(139, 164, 220); background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 2px 6px; font-family: arial,simsun,sans-serif; font-style: normal; font-variant: normal; font-size: 12px; line-height: 1.3em; font-size-adjust: none; font-stretch: normal; -moz-font-feature-settings: normal; -moz-font-language-override: normal; text-align: center; white-space: nowrap; border-radius: 3px 3px 3px 3px; color: rgb(0, 0, 0);}
+
+.mapInfoView{width:250px;border:0px;background-color:#fff;border-collapse:collapse;font-size:12px;color:#000;}
+.maptableForm{width:150px;border:0px;background-color:#fff;border-collapse:collapse;font-size:12px;color:#000;margin:auto;margin-top:5px;margin-bottom:5px;}
+.maptableForm th {padding:3px;text-align:right;font-size:12px;font-weight:normal;}
+.maptableForm td {padding:3px;text-align:left;color:#000;}
+.maptableForm td.grak{padding:3px;border:1px solid #c9d1d6;text-align:left;color:#000;background:#f5faff;}
+.maptableForm td.center{text-align:center;}
+.maptableForm td.right{text-align:right;}
+
+.grayText{color:#666;padding:5px;}
+a.blueLink{cursor:pointer;}
+a.blueLink:link{color:#005eb6;text-decoration:none;}
+a.blueLink:visited{color:#005eb6;text-decoration:none;}
+a.blueLink:hover{color:#DC0000;text-decoration:none;}
+a.blueLink:active{color:#DC0000;}
+
+
+/*弹出窗口*/
+.fieldset{border:1px #747186 solid;padding:1px;background: #E4EAF2;color:#000}
+.fieldset legend{font-size:12px;font-weight:bold;color:#358f04}
+.fieldset table{}
+.fieldset table tr td{
+    height:26px; text-align: left;
+    padding-right:20px;
+}
+.fieldset table tr td p {
+    color: red;
+    display: inline;
+    padding: 0px 2px;
+}
+.fieldset .tds1{
+    text-align: right;
+    padding-right:10px;
+}

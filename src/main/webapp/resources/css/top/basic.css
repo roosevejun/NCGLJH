@@ -1,0 +1,77 @@
+/* CSS Document */
+/*一些总结的CSS布局中需要的公共样式
+	author:闵艳艳
+	date:2013-01-31
+*/
+html,body,div,p,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form, input,
+select, button,textarea,iframe,table,th,td{
+	margin:0;
+	padding:0;
+}
+/*重置*/
+img{
+	border:0 none;
+}
+/*图片除边框*/
+ul,li{
+	list-style-type:none;
+}
+/*ul,li去除点*/
+h1,h2,h3,h4,h5,h6{
+	font-size:16px;
+}
+.button{
+	cursor:pointer;
+}
+/*手型效果*/
+i,em{
+	font-style:normal;
+}
+/*重置*/
+body{
+	background:#fff;
+	line-height:1.2;
+	text-align:center;
+	font:12px "宋体","Arial Narrow",HELVETICA;
+}
+a,a:link{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+.clear{
+	diplay: block !important;
+	float:none !important;
+	clear:both;
+}
+.fl, .fr{
+	display:inline;
+	float:left;
+}
+.fr{
+	float:right;
+}
+
+.wrap{
+	text-align:center;
+}
+
+.w1044{
+	 width:1044px;
+	 text-align:left;
+	 overflow:hidden;
+	 _zoom:1;	
+}
+
+.pc_100{
+	width:100%;
+	text-align:left;
+	overflow:hidden;
+	_zoom:1;
+}
+.red{ color:red;
+}
+.mt5{ margin-top:5px;
+}
+

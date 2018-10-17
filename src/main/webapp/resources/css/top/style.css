@@ -1,0 +1,35 @@
+/* CSS Document */
+
+.top{
+	/*background:url('img/topBg.gif') repeat-x 0 0;height:70px;*/
+	background:#04477c;
+}
+.logo{width:290px;height:70px;}
+.top_left{
+	float:left;
+}
+	
+.top_right{
+	background:url('img/logo_r.jpg') no-repeat right 0;height:70px;
+}
+	
+.top_right ul{
+	float:right;
+	color:#fff;
+	padding-right:40px;
+	margin-top:19px;
+}
+	
+.top_right ul li{
+	float:left;	
+	margin-left:10px;
+}
+.top_user {background:url('img/userBg.png') no-repeat 0 0;padding:3px 10px 0 50px;height:21px;position:absolute;top:1px;right:80px;color:#fff}
+.top_user a:link,.user a:visited{color:#accdf7;padding:0 0 0 15px;}
+.top_user a:hover{color:#e3eefc;padding:0 0 0 15px;}
+
+
+
+
+
+
