@@ -1,4 +1,4 @@
-package com.tongtu.ncgl.jh.services;
+package com.tongtu.ncgl.jh.services.postgres;
 
 import com.tongtu.ncgl.base.bean.Pagination;
 import com.tongtu.ncgl.jh.beans.plan.PlanQuery;

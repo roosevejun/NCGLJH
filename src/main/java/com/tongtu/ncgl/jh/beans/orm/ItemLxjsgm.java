@@ -2,6 +2,7 @@
 package com.tongtu.ncgl.jh.beans.orm;
 
 
+import com.tongtu.ncgl.base.bean.UUIDCRowIDEntity;
 import com.tongtu.ncgl.jh.beans.plan.JSGMXX;
 
 import java.math.BigDecimal;
@@ -74,7 +75,7 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement(name = "item_lxjsgm")
 @Entity
 @Table(name = "table_lxjsgm"  ,schema = "public")
-public class ItemLxjsgm extends JSGMXX {
+public class ItemLxjsgm extends UUIDCRowIDEntity {
     @XmlElement(name = "XMID", required = true)
     protected String xmid;
     @XmlElement(name = "LXBM", required = true)

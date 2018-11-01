@@ -1,6 +1,8 @@
 package com.tongtu.ncgl.jh.beans.plan;
 
+import com.tongtu.ncgl.jh.beans.orm.ItemAqsmfhgm;
 import com.tongtu.ncgl.jh.beans.orm.ItemNdjh;
+import com.tongtu.ncgl.jh.beans.orm.ItemQljsgm;
 import com.tongtu.ncgl.jh.beans.orm.ItemXmjbxx;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,9 +19,9 @@ public class Plandetail {
 
     private List<ItemNdjh> ndjh;
 
-    private List<JSGMXX> jsgmxx;
+    private JSGMXX jsgmxx;
 
-    private List<KeyPoint> keyPoint;
+    private KeyPoint keyPoint;
 
 
 }

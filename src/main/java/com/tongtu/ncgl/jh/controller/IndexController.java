@@ -2,8 +2,6 @@ package com.tongtu.ncgl.jh.controller;
 
 import com.tongtu.ncgl.base.controller.BaseController;
 import com.tongtu.ncgl.base.util.UserAccessAnnotation;
-import com.tongtu.ncgl.jh.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

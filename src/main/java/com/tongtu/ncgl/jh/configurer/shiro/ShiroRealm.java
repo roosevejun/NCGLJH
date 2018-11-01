@@ -1,7 +1,7 @@
 package com.tongtu.ncgl.jh.configurer.shiro;
 
 import com.tongtu.ncgl.jh.beans.sys.Appuser;
-import com.tongtu.ncgl.jh.services.UserService;
+import com.tongtu.ncgl.jh.services.sqlserver.UserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;

@@ -1,4 +1,4 @@
-package com.tongtu.ncgl.jh.services;
+package com.tongtu.ncgl.jh.services.sqlserver;
 
 import com.tongtu.ncgl.jh.beans.sys.Appuser;
 import com.tongtu.ncgl.jh.repository.sqlserver.AppuserRepository;

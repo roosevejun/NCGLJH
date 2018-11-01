@@ -1,6 +1,18 @@
 package com.tongtu.ncgl.jh.beans.plan;
 
-import com.tongtu.ncgl.base.bean.UUIDCRowIDEntity;
 
-public abstract class KeyPoint extends UUIDCRowIDEntity {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class KeyPoint<T> {
+
+    private List<T> KeyPoints;
+
 }

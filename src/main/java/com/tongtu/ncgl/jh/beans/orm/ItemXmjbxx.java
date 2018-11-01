@@ -2,7 +2,7 @@
 package com.tongtu.ncgl.jh.beans.orm;
 
 
-import com.tongtu.ncgl.base.bean.UUIDJBXXEntity;
+import com.tongtu.ncgl.base.bean.UUIDXMIDEntity;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
@@ -57,7 +57,7 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement(name = "item_xmjbxx")
 @Entity
 @Table(name = "table_xmjbxx"  ,schema = "public")
-public class ItemXmjbxx extends UUIDJBXXEntity {
+public class ItemXmjbxx extends UUIDXMIDEntity {
     @XmlElement(name = "XMMC", required = true)
     protected String xmmc;
     @XmlElement(name = "XMBM", required = true)

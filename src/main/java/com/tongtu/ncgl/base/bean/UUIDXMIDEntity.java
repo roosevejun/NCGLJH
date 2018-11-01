@@ -23,17 +23,17 @@ import java.io.Serializable;
  */
 @MappedSuperclass
 @XmlTransient
-public abstract class UUIDJBXXEntity implements Serializable {
+public abstract class UUIDXMIDEntity implements Serializable {
 
     @XmlElement(name = "XMID", required = true)
     protected String xmid;
 
-    public UUIDJBXXEntity() {
+    public UUIDXMIDEntity() {
         super();
     }
 
     @Id
-    @GenericGenerator(name = "idGenerator", strategy = "com.tongtu.util.UUIDGenerator")
+    @GenericGenerator(name = "idGenerator", strategy = "com.tongtu.ncgl.base.util.UUIDGenerator")
     @GeneratedValue(generator = "idGenerator")
     @Column(name = "xmcode", nullable = false, insertable = true, unique = true, updatable = true, length = 36)
     @ChinaMeaning(meaning = "表主键")

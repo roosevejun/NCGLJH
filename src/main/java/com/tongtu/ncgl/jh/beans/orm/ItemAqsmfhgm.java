@@ -1,11 +1,11 @@
 
 package com.tongtu.ncgl.jh.beans.orm;
 
-
 import com.tongtu.ncgl.base.bean.UUIDCRowIDEntity;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
+import java.math.BigDecimal;
 
 
 /**
@@ -20,12 +20,12 @@ import javax.xml.bind.annotation.*;
  *       &lt;sequence>
  *         &lt;element name="CROWID" type="{}typeXMID"/>
  *         &lt;element name="XMID" type="{}typeXMID"/>
- *         &lt;element name="JMDLX" type="{}typeJMDLX"/>
- *         &lt;element name="JMDLXHY" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="JMDBM" type="{}typeJMDBM"/>
- *         &lt;element name="JMDMC" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="TDZK" type="{}typeTDZK"/>
- *         &lt;element name="TDZKHY" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="LXBM" type="{}typeLXBM"/>
+ *         &lt;element name="LXMC" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="QDZH" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="ZDZH" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="YHLC" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="GJND" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="BZ" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -39,36 +39,37 @@ import javax.xml.bind.annotation.*;
 @XmlType(name = "", propOrder = {
     "crowid",
     "xmid",
-    "jmdlx",
-    "jmdlxhy",
-    "jmdbm",
-    "jmdmc",
-    "tdzk",
-    "tdzkhy",
+    "lxbm",
+    "lxmc",
+    "qdzh",
+    "zdzh",
+    "yhlc",
+    "gjnd",
     "bz"
 })
-@XmlRootElement(name = "item_jmdxx")
+@XmlRootElement(name = "item_aqsmfhgm")
 @Entity
-@Table(name = "table_jmdxx"  ,schema = "public")
-public class ItemJmdxx  extends UUIDCRowIDEntity {
+@Table( name = "table_aqsmfhgm" ,schema = "public")
+public class ItemAqsmfhgm extends UUIDCRowIDEntity {
     @XmlElement(name = "XMID", required = true)
     protected String xmid;
-    @XmlElement(name = "JMDLX", required = true)
-    protected String jmdlx;
-    @XmlElement(name = "JMDLXHY", required = true)
-    protected String jmdlxhy;
-    @XmlElement(name = "JMDBM", required = true)
-    protected String jmdbm;
-    @XmlElement(name = "JMDMC", required = true)
-    protected String jmdmc;
-    @XmlElement(name = "TDZK", required = true)
-    protected String tdzk;
-    @XmlElement(name = "TDZKHY", required = true)
-    protected String tdzkhy;
+    @XmlElement(name = "LXBM", required = true)
+    protected String lxbm;
+    @XmlElement(name = "LXMC", required = true)
+    protected String lxmc;
+    @XmlElement(name = "QDZH", required = true, defaultValue = "0")
+    protected BigDecimal qdzh;
+    @XmlElement(name = "ZDZH", required = true, defaultValue = "0")
+    protected BigDecimal zdzh;
+    @XmlElement(name = "YHLC", required = true, defaultValue = "0")
+    protected BigDecimal yhlc;
+    @XmlElement(name = "GJND", required = true)
+    protected String gjnd;
     @XmlElement(name = "BZ", required = true)
     protected String bz;
     @XmlTransient()
     private ItemXmjbxx xmjbxx;
+
     /**
      * 获取xmid属性的值。
      * 
@@ -96,159 +97,159 @@ public class ItemJmdxx  extends UUIDCRowIDEntity {
     }
 
     /**
-     * 获取jmdlx属性的值。
+     * 获取lxbm属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Column(name = "jmdlx", nullable = false, insertable = true, updatable = true, length = 2, precision = 2)
+    @Column(name = "lxbm", nullable = false, insertable = true, updatable = true, length = 10, precision = 10)
     @Basic
-    public String getJmdlx() {
-        return jmdlx;
+    public String getLxbm() {
+        return lxbm;
     }
 
     /**
-     * 设置jmdlx属性的值。
+     * 设置lxbm属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setJmdlx(String value) {
-        this.jmdlx = value;
+    public void setLxbm(String value) {
+        this.lxbm = value;
     }
 
     /**
-     * 获取jmdlxhy属性的值。
+     * 获取lxmc属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Column(name = "jmdlxhy", nullable = false, insertable = true, updatable = true, length = 20, precision = 20)
+    @Column(name = "lxmc", nullable = false, insertable = true, updatable = true, length = 500, precision = 500)
     @Basic
-    public String getJmdlxhy() {
-        return jmdlxhy;
+    public String getLxmc() {
+        return lxmc;
     }
 
     /**
-     * 设置jmdlxhy属性的值。
+     * 设置lxmc属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setJmdlxhy(String value) {
-        this.jmdlxhy = value;
+    public void setLxmc(String value) {
+        this.lxmc = value;
     }
 
     /**
-     * 获取jmdbm属性的值。
+     * 获取qdzh属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
+     */
+    @Column(name = "qdzh", nullable = true, insertable = true, updatable = true, precision = 7, scale = 3)
+    @Basic
+    public BigDecimal getQdzh() {
+        return qdzh;
+    }
+
+    /**
+     * 设置qdzh属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
+     */
+    public void setQdzh(BigDecimal value) {
+        this.qdzh = value;
+    }
+
+    /**
+     * 获取zdzh属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
+     */
+    @Column(name = "zdzh", nullable = true, insertable = true, updatable = true, precision = 7, scale = 3)
+    @Basic
+    public BigDecimal getZdzh() {
+        return zdzh;
+    }
+
+    /**
+     * 设置zdzh属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
+     */
+    public void setZdzh(BigDecimal value) {
+        this.zdzh = value;
+    }
+
+    /**
+     * 获取yhlc属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
+     */
+    @Column(name = "yhlc", nullable = true, insertable = true, updatable = true, precision = 7, scale = 3)
+    @Basic
+    public BigDecimal getYhlc() {
+        return yhlc;
+    }
+
+    /**
+     * 设置yhlc属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
+     */
+    public void setYhlc(BigDecimal value) {
+        this.yhlc = value;
+    }
+
+    /**
+     * 获取gjnd属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    @Column(name = "jmdbm", nullable = false, insertable = true, updatable = true, length = 15, precision = 15)
+    @Column(name = "gjnd", nullable = false, insertable = true, updatable = true, length = 4, precision = 4)
     @Basic
-    public String getJmdbm() {
-        return jmdbm;
+    public String getGjnd() {
+        return gjnd;
     }
 
     /**
-     * 设置jmdbm属性的值。
+     * 设置gjnd属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setJmdbm(String value) {
-        this.jmdbm = value;
-    }
-
-    /**
-     * 获取jmdmc属性的值。
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    @Column(name = "jmdmc", nullable = false, insertable = true, updatable = true, length = 50, precision = 50)
-    @Basic
-    public String getJmdmc() {
-        return jmdmc;
-    }
-
-    /**
-     * 设置jmdmc属性的值。
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setJmdmc(String value) {
-        this.jmdmc = value;
-    }
-
-    /**
-     * 获取tdzk属性的值。
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    @Column(name = "tdzk", nullable = false, insertable = true, updatable = true, length = 2, precision = 2)
-    @Basic
-    public String getTdzk() {
-        return tdzk;
-    }
-
-    /**
-     * 设置tdzk属性的值。
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTdzk(String value) {
-        this.tdzk = value;
-    }
-
-    /**
-     * 获取tdzkhy属性的值。
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    @Column(name = "tdzkhy", nullable = false, insertable = true, updatable = true, length = 20, precision = 20)
-    @Basic
-    public String getTdzkhy() {
-        return tdzkhy;
-    }
-
-    /**
-     * 设置tdzkhy属性的值。
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTdzkhy(String value) {
-        this.tdzkhy = value;
+    public void setGjnd(String value) {
+        this.gjnd = value;
     }
 
     /**
@@ -261,7 +262,7 @@ public class ItemJmdxx  extends UUIDCRowIDEntity {
      */
     @Column(name = "bz", nullable = true, insertable = true, updatable = true, length = 500, precision = 500)
     @Basic
-    public String getBz() {
+        public String getBz() {
         return bz;
     }
 
